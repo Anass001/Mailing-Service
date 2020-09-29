@@ -1,0 +1,1 @@
+package tech.bluemail.platform.orm;
