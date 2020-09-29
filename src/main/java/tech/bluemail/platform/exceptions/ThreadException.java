@@ -1,15 +1,15 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.exceptions;
 
-import tech.bluemail.platform.logging.*;
+import tech.bluemail.platform.logging.Logger;
 
-public class ThreadException implements Thread.UncaughtExceptionHandler
-{
-    public ThreadException() {
-        super();
-    }
-    
+public class ThreadException
+implements Thread.UncaughtExceptionHandler {
     @Override
-    public void uncaughtException(final Thread t, final Throwable e) {
+    public void uncaughtException(Thread t, Throwable e) {
         Logger.error(e, t.getClass());
     }
 }
+

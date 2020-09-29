@@ -1,21 +1,31 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.meta.annotations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Annotation;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 @Documented
-@Target({ ElementType.FIELD })
+@Target(value={ElementType.FIELD})
 @Inherited
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(value=RetentionPolicy.RUNTIME)
 public @interface Column {
-    String name() default "";
-    
-    boolean autoincrement() default false;
-    
-    boolean primary() default false;
-    
-    String type() default "integer";
-    
-    boolean nullable() default false;
-    
-    int length() default 0;
+    public String name() default "";
+
+    public boolean autoincrement() default false;
+
+    public boolean primary() default false;
+
+    public String type() default "integer";
+
+    public boolean nullable() default false;
+
+    public int length() default 0;
 }
+

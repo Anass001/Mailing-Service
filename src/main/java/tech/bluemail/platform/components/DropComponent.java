@@ -1,13 +1,25 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.components;
 
-import java.io.*;
-import java.util.*;
-import tech.bluemail.platform.models.lists.*;
-import tech.bluemail.platform.models.admin.*;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
+import tech.bluemail.platform.components.RotatorComponent;
+import tech.bluemail.platform.models.admin.Isp;
+import tech.bluemail.platform.models.admin.Negative;
+import tech.bluemail.platform.models.admin.Offer;
+import tech.bluemail.platform.models.admin.OfferName;
+import tech.bluemail.platform.models.admin.OfferSubject;
+import tech.bluemail.platform.models.admin.Server;
+import tech.bluemail.platform.models.admin.Sponsor;
+import tech.bluemail.platform.models.admin.Vmta;
+import tech.bluemail.platform.models.lists.Fresh;
 
-public class DropComponent implements Serializable
-{
-    public int id;
+public class DropComponent
+implements Serializable {
+    public int id = 0;
     public boolean isSend;
     public String content;
     public String[] randomTags;
@@ -15,8 +27,8 @@ public class DropComponent implements Serializable
     public int negativeId;
     public String negativeFileName;
     public Negative negativeObject;
-    public boolean isNewDrop;
-    public boolean isStoped;
+    public boolean isNewDrop = true;
+    public boolean isStoped = false;
     public String[] serversIds;
     public List<Server> servers;
     public String[] vmtasIds;
@@ -77,22 +89,15 @@ public class DropComponent implements Serializable
     public int autoResponseRotation;
     public String[] autoReplyEmails;
     public volatile String pickupsFolder;
-    public volatile int emailsCounter;
+    public volatile int emailsCounter = 0;
     public volatile RotatorComponent vmtasRotator;
-    
-    public DropComponent() {
-        super();
-        this.id = 0;
-        this.isNewDrop = true;
-        this.isStoped = false;
-        this.emailsCounter = 0;
-    }
-    
+
     public synchronized int updateCounter() {
         return this.emailsCounter++;
     }
-    
+
     public Vmta getCurrentVmta() {
         return (Vmta)this.vmtasRotator.getCurrentThenRotate();
     }
 }
+

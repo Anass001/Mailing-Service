@@ -1,20 +1,24 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.exceptions;
 
-public class DropException extends Exception
-{
-    public DropException(final String message) {
+public class DropException
+extends Exception {
+    public DropException(String message) {
         super(message);
     }
-    
-    public DropException(final String message, final Throwable cause) {
+
+    public DropException(String message, Throwable cause) {
         super(message, cause);
     }
-    
-    public DropException(final Throwable cause) {
+
+    public DropException(Throwable cause) {
         super(cause);
     }
-    
-    public DropException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
+
+    public DropException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }
+

@@ -1,6 +1,9 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.interfaces;
 
-public interface Controller
-{
-    void start(final String[] p0) throws Exception;
+public interface Controller {
+    public void start(String[] var1) throws Exception;
 }
+

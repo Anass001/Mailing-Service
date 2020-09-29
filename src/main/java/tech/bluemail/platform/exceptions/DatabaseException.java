@@ -1,20 +1,24 @@
+/*
+ * Decompiled with CFR <Could not determine version>.
+ */
 package tech.bluemail.platform.exceptions;
 
-public class DatabaseException extends Exception
-{
-    public DatabaseException(final String message) {
+public class DatabaseException
+extends Exception {
+    public DatabaseException(String message) {
         super(message);
     }
-    
-    public DatabaseException(final String message, final Throwable cause) {
+
+    public DatabaseException(String message, Throwable cause) {
         super(message, cause);
     }
-    
-    public DatabaseException(final Throwable cause) {
+
+    public DatabaseException(Throwable cause) {
         super(cause);
     }
-    
-    public DatabaseException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
+
+    public DatabaseException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }
+
